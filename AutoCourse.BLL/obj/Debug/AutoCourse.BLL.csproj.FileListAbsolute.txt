@@ -1,0 +1,11 @@
+D:\Study\AutoCourse\AutoCourse.BLL\obj\Debug\AutoCourse.BLL.csprojResolveAssemblyReference.cache
+D:\Study\AutoCourse\AutoCourse.BLL\bin\Debug\AutoCourse.BLL.dll
+D:\Study\AutoCourse\AutoCourse.BLL\bin\Debug\AutoCourse.BLL.pdb
+D:\Study\AutoCourse\AutoCourse.BLL\bin\Debug\AutoCourse.DAL.dll
+D:\Study\AutoCourse\AutoCourse.BLL\bin\Debug\AutoCourse.Models.dll
+D:\Study\AutoCourse\AutoCourse.BLL\bin\Debug\EntityFramework.dll
+D:\Study\AutoCourse\AutoCourse.BLL\bin\Debug\AutoCourse.DAL.pdb
+D:\Study\AutoCourse\AutoCourse.BLL\bin\Debug\AutoCourse.Models.pdb
+D:\Study\AutoCourse\AutoCourse.BLL\bin\Debug\EntityFramework.xml
+D:\Study\AutoCourse\AutoCourse.BLL\obj\Debug\AutoCourse.BLL.dll
+D:\Study\AutoCourse\AutoCourse.BLL\obj\Debug\AutoCourse.BLL.pdb

@@ -1,0 +1,14 @@
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\AutoCourse.Models.dll.config
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\AutoCourse.Models.dll
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\AutoCourse.Models.pdb
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\EntityFramework.dll
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\EntityFramework.xml
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Study\AutoCourse\AutoCourse.Models\obj\Debug\AutoCourse.Models.dll
+D:\Study\AutoCourse\AutoCourse.Models\obj\Debug\AutoCourse.Models.pdb
+D:\Study\AutoCourse\AutoCourse.Models\obj\Debug\AutoCourse.Models.csprojResolveAssemblyReference.cache
