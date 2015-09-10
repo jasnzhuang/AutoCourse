@@ -40,12 +40,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ACBaseServices.cs" />
+    <Compile Include="BLLModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AutoCourse.DAL\AutoCourse.DAL.csproj">
       <Project>{07f0dadb-5572-4300-92fc-53d5cb22545b}</Project>
       <Name>AutoCourse.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutoCourse.Models\AutoCourse.Models.csproj">
+      <Project>{49b73840-ea70-43f0-adf1-f90288b29176}</Project>
+      <Name>AutoCourse.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
