@@ -11,4 +11,3 @@ D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\Microsoft.AspNet.Identity.Core.x
 D:\Study\AutoCourse\AutoCourse.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\Study\AutoCourse\AutoCourse.Models\obj\Debug\AutoCourse.Models.dll
 D:\Study\AutoCourse\AutoCourse.Models\obj\Debug\AutoCourse.Models.pdb
-D:\Study\AutoCourse\AutoCourse.Models\obj\Debug\AutoCourse.Models.csprojResolveAssemblyReference.cache

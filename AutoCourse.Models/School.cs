@@ -7,19 +7,18 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace AutoCourse.Models
 {
-    public class School 
+    public class School
     {
-        
+
         public int SchoolID { get; set; }
 
         [Required]
         public string SchoolName { get; set; }
 
-        [Required]
-        public string UserID { get; set; }
-        
         public virtual ICollection<Teacher> Teachers { get; set; }
 
         public virtual ICollection<Term> Terms { get; set; }
+
+        public virtual ICollection<ManageUser> ManageUsers { get; set; }
     }
 }
