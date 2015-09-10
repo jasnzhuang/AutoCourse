@@ -13,12 +13,12 @@ namespace AutoCourse.Models
         public int TeacherID { get; set; }
 
         [ForeignKey("TeacherID")]
-        public Teacher Teacher { get; set; }
+        public virtual Teacher Teacher { get; set; }
 
         public int CourseID { get; set; }
 
         [ForeignKey("CourseID")]
-        public Course Course { get; set; }
+        public virtual Course Course { get; set; }
 
         public virtual ICollection<TeacherCourseClass> TeacherCourseClasses { get; set; }
 

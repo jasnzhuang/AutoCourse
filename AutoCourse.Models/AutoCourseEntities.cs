@@ -30,7 +30,7 @@ namespace AutoCourse.Models
 
         public DbSet<TeacherCourseClass> TeacherCoureseClasses { get; set; }
 
-        public DbSet<ManageUser> ManageUsers { get; set; }
+       // public DbSet<ManageUser> ManageUsers { get; set; }
 
     }
 }

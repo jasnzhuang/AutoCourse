@@ -13,6 +13,6 @@ namespace AutoCourse.Models
         public int TeacherCoureseID { get; set; }
 
         [ForeignKey("TeacherCoureseID")]
-        public TeacherCourse TeacherCourese { get; set; }
+        public virtual TeacherCourse TeacherCourese { get; set; }
     }
 }

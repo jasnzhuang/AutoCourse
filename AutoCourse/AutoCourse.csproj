@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -112,13 +113,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AutoCourse.DAL\AutoCourse.DAL.csproj">
-      <Project>{07f0dadb-5572-4300-92fc-53d5cb22545b}</Project>
-      <Name>AutoCourse.DAL</Name>
+    <ProjectReference Include="..\AutoCourse.BLL\AutoCourse.BLL.csproj">
+      <Project>{a78720d9-52b5-42fa-b694-d8556ff3fabc}</Project>
+      <Name>AutoCourse.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutoCourse.Models\AutoCourse.Models.csproj">
+      <Project>{49b73840-ea70-43f0-adf1-f90288b29176}</Project>
+      <Name>AutoCourse.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -12,12 +12,13 @@ namespace AutoCourse.Models
     {
         [Required]
         [Key]
-        public int UserID { get; set; }
+        public int ManageUserID { get; set; }
                 
+        public string UserName { get; set; }
         public int SchoolID { get; set; }
-        
+
 
         [ForeignKey("SchoolID")]
-        public School School { get; set; } 
+        public virtual School School { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 #VS Package
-Package
+Packages/
+.gitignore
 
 # Windows image file caches
 Thumbs.db

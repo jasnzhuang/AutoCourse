@@ -18,10 +18,7 @@ namespace AutoCourse.Models
 
         [Required]
         [Index("idx_Teacher_SchoolIDAndTeacherName", Order = 1, IsUnique = true)]
-        public int SchoolID { get; set; }
-
-        [ForeignKey("SchoolID")]
-        public School School { get; set; }
+        public int SchoolID { get; set; }        
 
         public virtual ICollection<TeacherCourse> TeacherCourses { get; set; }
     }
