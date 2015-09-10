@@ -18,7 +18,9 @@ namespace AutoCourse.Controllers
         [HttpPost]
         public ActionResult Login(string username)
         {
-
+            AutoCourse.BLL.BLLManageUser m = new BLL.BLLManageUser();
+            AutoCourse.Models.ManageUser mu = m.Find(username);
+            
         }
 	}
 }

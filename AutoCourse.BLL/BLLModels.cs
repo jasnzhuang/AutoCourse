@@ -16,10 +16,6 @@ namespace AutoCourse.BLL
     {
     }
 
-    public class BLLManageUser : ACBaseServices<ManageUser>
-    {
-    }
-
     public class BLLSchool : ACBaseServices<School>
     {
     }
