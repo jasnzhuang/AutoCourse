@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>登录</title>
+</head>
+<body>
+    @using (Html.BeginForm("Login", "Login"))
+    {
+        <div>
+            用户信息：
+            @ViewData["username"]   + "|" + @ViewData["schoolid"]
+        </div>
+        <div>
+            <input type="text" name="tbusername" />
+            <br />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="登录" class="btn btn-default" />
+
+                    <input type="button" value="注销" class="btn btn-default" onclick="loginout()" />
+
+                </div>
+            </div>
+        </div>
+    }
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+
+    <script>
+        function loginout() {
+            $.ajax({
+                url: "/Login/LoginOut",
+                success: {
+
+                }
+            });
+        }
+    </script>
+</body>
+</html>

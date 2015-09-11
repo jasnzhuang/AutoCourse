@@ -33,3 +33,16 @@ D:\Study\AutoCourse\AutoCourse\bin\zh-Hans\System.Web.Mvc.resources.dll
 D:\Study\AutoCourse\AutoCourse\obj\Debug\AutoCourse.csprojResolveAssemblyReference.cache
 D:\Study\AutoCourse\AutoCourse\obj\Debug\AutoCourse.dll
 D:\Study\AutoCourse\AutoCourse\obj\Debug\AutoCourse.pdb
+D:\Study\AutoCourse\AutoCourse\bin\AutoCourse.BLL.dll
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.dll
+D:\Study\AutoCourse\AutoCourse\bin\Owin.dll
+D:\Study\AutoCourse\AutoCourse\bin\AutoCourse.BLL.pdb
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.xml
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Diagnostics.dll
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Host.HttpListener.dll
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Hosting.dll
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Diagnostics.xml
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Host.HttpListener.xml
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Hosting.xml
