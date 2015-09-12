@@ -46,3 +46,13 @@ D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Hosting.dll
 D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Diagnostics.xml
 D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Host.HttpListener.xml
 D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Hosting.xml
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Security.dll
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Study\AutoCourse\AutoCourse\bin\Newtonsoft.Json.dll
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Security.xml
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Study\AutoCourse\AutoCourse\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Study\AutoCourse\AutoCourse\bin\Newtonsoft.Json.xml

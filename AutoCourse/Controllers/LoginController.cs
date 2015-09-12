@@ -15,6 +15,7 @@ namespace AutoCourse.Controllers
         public ActionResult Index()
         {
             //BLLManageUser mu = new BLLManageUser();
+            ViewData["userid"] = User.Identity.Name;
             ViewData["username"] = UserAuthentication.GetUserName(User);
             ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
             return View();
@@ -28,7 +29,7 @@ namespace AutoCourse.Controllers
             BLLManageUser mu = new BLLManageUser();
             AutoCourse.Models.ManageUser m = mu.Find(u => u.UserName == username);
             UserAuthentication.Authentication(Request.RequestContext.HttpContext, username, m);
-
+            ViewData["userid"] = User.Identity.Name;
             ViewData["username"] = UserAuthentication.GetUserName(User);
             ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
 
