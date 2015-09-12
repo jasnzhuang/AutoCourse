@@ -22,40 +22,6 @@ namespace AutoCourse.BLL
             return mu;
         }
 
-        public void Authentication(HttpContextBase httpcontext, string username, AutoCourse.Models.ManageUser manageuser)
-        {
-            ClaimsIdentity _identity = new ClaimsIdentity(DefaultAuthenticationTypes.ApplicationCookie);
-            if (manageuser == null)
-            {
-                _identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, username));
-                _identity.AddClaim(new Claim(ClaimTypes.GroupSid, "0"));
-            }
-            else
-            {
-                _identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, manageuser.UserName));
-                _identity.AddClaim(new Claim(ClaimTypes.GroupSid, manageuser.SchoolID.ToString()));
-            }
-            _identity.AddClaim(new Claim("http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider", "ASP.NET Identity"));
-
-            httpcontext.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            httpcontext.GetOwinContext().Authentication.SignIn(new AuthenticationProperties() { IsPersistent = true }, _identity);
-        }
-
-        public static void LoginOut(HttpContextBase httpcontext)
-        {
-            httpcontext.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-        }
-
-        public string GetUserName(IPrincipal user)
-        {
-            var claim = ((ClaimsIdentity)user.Identity).FindFirst(ClaimTypes.NameIdentifier);
-            return claim == null ? null : claim.Value;
-        }
-
-        public string GetSchoolID(IPrincipal user)
-        {
-            var claim = ((ClaimsIdentity)user.Identity).FindFirst(ClaimTypes.GroupSid);
-            return claim == null ? null : claim.Value;
-        }
+        
     }
 }
