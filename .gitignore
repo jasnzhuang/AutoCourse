@@ -49,3 +49,5 @@ Temporary Items
 .apdisk
 *.nuspec
 *.dll
+*.suo
+AutoCourse/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
