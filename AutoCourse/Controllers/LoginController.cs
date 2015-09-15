@@ -13,7 +13,7 @@ namespace AutoCourse.Controllers
         //
         // GET: /Login/
         public ActionResult Index()
-        {            
+        {
             ViewData["userid"] = User.Identity.Name;
             ViewData["username"] = UserAuthentication.GetUserName(User);
             ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
@@ -30,13 +30,13 @@ namespace AutoCourse.Controllers
             UserAuthentication.Authentication(Request.RequestContext.HttpContext, username, m);
             ViewData["userid"] = User.Identity.Name;
             ViewData["username"] = UserAuthentication.GetUserName(User);
-            ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);            
-            return Redirect("index");
+            ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
+            return Redirect("/School/index");
         }
 
         public ActionResult LoginOut()
         {
-            UserAuthentication.LoginOut(Request.RequestContext.HttpContext);            
+            UserAuthentication.LoginOut(Request.RequestContext.HttpContext);
             ViewData["userid"] = User.Identity.Name;
             ViewData["username"] = UserAuthentication.GetUserName(User);
             ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
