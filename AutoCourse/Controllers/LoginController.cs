@@ -13,8 +13,7 @@ namespace AutoCourse.Controllers
         //
         // GET: /Login/
         public ActionResult Index()
-        {
-            //BLLManageUser mu = new BLLManageUser();
+        {            
             ViewData["userid"] = User.Identity.Name;
             ViewData["username"] = UserAuthentication.GetUserName(User);
             ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
@@ -31,19 +30,17 @@ namespace AutoCourse.Controllers
             UserAuthentication.Authentication(Request.RequestContext.HttpContext, username, m);
             ViewData["userid"] = User.Identity.Name;
             ViewData["username"] = UserAuthentication.GetUserName(User);
-            ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
-
-            return View("index");
-            //return Redirect("~/School/index");
+            ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);            
+            return Redirect("index");
         }
 
         public ActionResult LoginOut()
         {
-            UserAuthentication.LoginOut(Request.RequestContext.HttpContext);
-
-            //BLLManageUser mu = new BLLManageUser();
-            string s = UserAuthentication.GetUserName(User) + "|" + UserAuthentication.GetSchoolID(User);
-            return Content(s);
+            UserAuthentication.LoginOut(Request.RequestContext.HttpContext);            
+            ViewData["userid"] = User.Identity.Name;
+            ViewData["username"] = UserAuthentication.GetUserName(User);
+            ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
+            return Redirect("index");
         }
     }
 }
