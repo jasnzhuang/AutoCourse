@@ -83,5 +83,10 @@ namespace AutoCourse.BLL
         {
             return _ACBaseDBOption.FindList(whereLandba);
         }
+
+        public int Save()
+        {
+            return _ACBaseDBOption.Save();
+        }
     }
 }

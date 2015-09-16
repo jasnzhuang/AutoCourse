@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.Entity.Infrastructure;
 using System.Linq.Expressions;
+using System.Data.Entity;
 
 
 namespace AutoCourse.DAL
@@ -40,9 +41,12 @@ namespace AutoCourse.DAL
         public T UpDate(T entity, bool IsSave = true)
         {
             ACEntities.Set<T>().Attach(entity);
+            ACEntities.Entry<T>(entity).State = EntityState.Modified;
+
             if (IsSave)
             {
                 ACEntities.SaveChanges();
+
             }
             return entity;
         }
@@ -95,6 +99,11 @@ namespace AutoCourse.DAL
         public IQueryable<T> FindList(Expression<Func<T, bool>> whereLandba)
         {
             return ACEntities.Set<T>().Where(whereLandba);
+        }
+
+        public int Save()
+        {
+            return ACEntities.SaveChanges();
         }
 
     }

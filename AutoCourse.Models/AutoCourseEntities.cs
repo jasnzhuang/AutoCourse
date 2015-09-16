@@ -10,11 +10,12 @@ namespace AutoCourse.Models
 {
     public class AutoCourseEntities : DbContext
     {
-
+        
+        
         public AutoCourseEntities()
             : base("name=AutoCourseDBConnectionString")
-        {
-
+        {   
+            
         }
         public DbSet<School> Schools { get; set; }
 

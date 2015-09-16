@@ -43,9 +43,69 @@ namespace AutoCourse.Controllers
 
         [HttpPost]
         public ActionResult Edit(Models.School school)
-        {            
-            new BLLSchool().UpDate(school);
-            return View(school);
+        {
+            BLL.BLLSchool bs = new BLLSchool();
+            Models.School sc = bs.Find(school.SchoolID);
+            sc.SchoolName = school.SchoolName;
+            bs.UpDate(sc);
+            return View(sc);
+        }
+
+        [HttpPost]
+        public ActionResult CreateCourese()
+        {
+            int schoolid = User.GetSchoolID();
+            BLL.ACBaseExecService.ExecSQL("Delete Courses Where SchoolID={0}", schoolid);
+            string s = Request.Form["data"];
+            BLLCousrse bc = new BLLCousrse();
+            foreach (var c in s.Split('\n'))
+            {
+                Models.Course mc = new Models.Course();
+                mc.CourseName = c;
+                mc.SchoolID = schoolid;
+                bc.Add(mc, false);
+
+            }
+            bc.Save();
+            return Content("T");
+        }
+
+        [HttpPost]
+        public ActionResult CreateClass()
+        {
+            int schoolid = User.GetSchoolID();
+            BLL.ACBaseExecService.ExecSQL("Delete Classes Where SchoolID={0}", schoolid);
+            string s = Request.Form["data"];
+            BLLClass bc = new BLLClass();
+            foreach (var c in s.Split('\n'))
+            {
+                Models.Class mc = new Models.Class();
+                mc.ClassName = c;
+                mc.SchoolID = schoolid;
+                bc.Add(mc, false);
+
+            }
+            bc.Save();
+            return Content("T");
+        }
+
+        [HttpPost]
+        public ActionResult CreateTeacher()
+        {
+            int schoolid = User.GetSchoolID();
+            BLL.ACBaseExecService.ExecSQL("Delete Teachers Where SchoolID={0}", schoolid);
+            string s = Request.Form["data"];
+            BllTeacher bc = new BllTeacher();
+            foreach (var c in s.Split('\n'))
+            {
+                Models.Teacher mc = new Models.Teacher();
+                mc.TeacherName = c;                
+                mc.SchoolID = schoolid;
+                bc.Add(mc, false);
+
+            }
+            bc.Save();
+            return Content("T");
         }
     }
 }

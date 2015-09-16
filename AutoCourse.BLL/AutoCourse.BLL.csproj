@@ -94,6 +94,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ACBaseExecService.cs" />
     <Compile Include="ACBaseServices.cs" />
     <Compile Include="BLLManageUser.cs" />
     <Compile Include="BLLModels.cs" />

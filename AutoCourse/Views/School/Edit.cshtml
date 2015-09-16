@@ -41,5 +41,54 @@
     <div>
         @Html.ActionLink("返回列表", "Index")
     </div>
+    <div id="divdatatype">
+        导入数据：<br />
+        <input type="radio" value="CreateCourese" name="rdata" id="rcourse" /><label for="rcourse">课程数据</label>
+        <input type="radio" value="CreateClass" name="rdata" id="rclass" /><label for="rclass">班级数据</label>
+        <input type="radio" value="CreateTeacher" name="rdata" id="rteacher" /><label for="rteacher">老师数据</label>
+        <br />
+        <textarea id="tdata" style="height:100px"></textarea>
+        <br />
+        <span style="color:red">
+            注意：一行一条数据<br />
+            导入的话，会删除掉以前的所有数据
+        </span>
+
+        <br />
+        <input type="button" onclick="SaveData()" value="导入" />
+        <label id="lbCouse" style="display:none">保存成功</label>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        function SaveData() {
+            var actionname = $('#divdatatype input[name="rdata"]:checked ').val();
+            if (actionname == undefined) {
+                alert("请选择导入的数据类型");
+                return;
+            }
+            var datacontext = $("#tdata").val();
+            if (datacontext == "") {
+                alert("请输入导入内容");
+                return;
+            }
+            $.ajax({
+                url: actionname,
+                data: {
+                    data: datacontext,
+                },
+                type: "Post",
+                success: function (data) {
+                    if (data == "T") {
+                        $("#lbCouse").val("保存成功");
+                        $("#lbCouse").show();
+                        $("#tdata").val("");
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    $("#lbCouse").val(errorThrown);
+                }
+            });
+        }
+    </script>
 </body>
 </html>
