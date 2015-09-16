@@ -22,27 +22,30 @@ namespace AutoCourse.Controllers
         {
             BLLSchool bs = new BLLSchool();
             Models.School sc = new Models.School();
-            sc.SchoolName = "";
+            sc.SchoolName = "新学校";
             bs.Add(sc);
             //创建学校，同时创建学校和用户的关系
             Models.ManageUser mu = new Models.ManageUser();
             mu.UserName = User.GetUserName();
             mu.SchoolID = sc.SchoolID;
+            User.SetSchoolID(sc.SchoolID);
+
             new BLLManageUser().Add(mu);
             return View("Edit", sc);
             //return Redirect("Edit?schoolid=" + sc.SchoolID);
             //return RedirectToAction("Edit", new { schoolid = sc.SchoolID });
         }
 
-        public ActionResult Edit(int schoolid)
+        public ActionResult Edit()
         {
-            return View(new BLLSchool().Find(schoolid));
+            return View(new BLLSchool().Find(User.GetSchoolID()));
         }
 
-        public ActionResult UpDate()
-        {
-
-            return View("Edit");
+        [HttpPost]
+        public ActionResult Edit(Models.School school)
+        {            
+            new BLLSchool().UpDate(school);
+            return View(school);
         }
     }
 }

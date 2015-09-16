@@ -26,13 +26,13 @@
 <p>
 
     @*判断，如果已经关联的学校，那么，这个地方就不要显示新增，而是编辑了*@
-    @if (User.GetSchoolID() == "0")
+    @if (User.GetSchoolID() == 0)
     {
         @Html.ActionLink("新增", "CreateNew");
     }
     else
     {
-        Html.ActionLink("编辑", "Edit");
+        @Html.ActionLink("编辑", "Edit");
     }
 
 </p>

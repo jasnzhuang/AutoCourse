@@ -43,10 +43,17 @@ namespace AutoCourse.BLL
             return claim == null ? null : claim.Value;
         }
 
-        public static string GetSchoolID(this IPrincipal user)
+        public static void SetSchoolID(this IPrincipal user,int schoolid)
+        {
+            ClaimsIdentity _identity = new ClaimsIdentity(DefaultAuthenticationTypes.ApplicationCookie);
+            _identity.AddClaim(new Claim(ClaimTypes.GroupSid, schoolid.ToString()));
+
+        }
+
+        public static int GetSchoolID(this IPrincipal user)
         {
             var claim = ((ClaimsIdentity)user.Identity).FindFirst(ClaimTypes.GroupSid);
-            return claim == null ? null : claim.Value;
+            return claim == null ? 0 : Convert.ToInt32(claim.Value);
         }
     }
 }
