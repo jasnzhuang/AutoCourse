@@ -13,7 +13,10 @@ namespace AutoCourse.Models
         [Required]
         [Key]
         public int ManageUserID { get; set; }
-                
+
+        [Required]
+        [MaxLength(200)]
+        [Index("idx_ManageUser_UserName", Order = 1, IsUnique = true)]
         public string UserName { get; set; }
         public int SchoolID { get; set; }
 

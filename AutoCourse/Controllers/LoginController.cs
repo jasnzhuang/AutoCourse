@@ -13,10 +13,9 @@ namespace AutoCourse.Controllers
         //
         // GET: /Login/
         public ActionResult Index()
-        {
-            ViewData["userid"] = User.Identity.Name;
-            ViewData["username"] = UserAuthentication.GetUserName(User);
-            ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
+        {            
+            ViewData["username"] = User.GetUserName();
+            ViewData["schoolid"] = User.GetSchoolID();
             return View();
         }
 
@@ -27,17 +26,15 @@ namespace AutoCourse.Controllers
 
             BLLManageUser mu = new BLLManageUser();
             AutoCourse.Models.ManageUser m = mu.Find(u => u.UserName == username);
-            UserAuthentication.Authentication(Request.RequestContext.HttpContext, username, m);
-            ViewData["userid"] = User.Identity.Name;
-            ViewData["username"] = UserAuthentication.GetUserName(User);
-            ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
+            UserAuthentication.Authentication(Request.RequestContext.HttpContext, username, m);            
+            ViewData["username"] = User.GetUserName();
+            ViewData["schoolid"] = User.GetSchoolID();
             return Redirect("/School/index");
         }
 
         public ActionResult LoginOut()
         {
-            UserAuthentication.LoginOut(Request.RequestContext.HttpContext);
-            ViewData["userid"] = User.Identity.Name;
+            UserAuthentication.LoginOut(Request.RequestContext.HttpContext);            
             ViewData["username"] = UserAuthentication.GetUserName(User);
             ViewData["schoolid"] = UserAuthentication.GetSchoolID(User);
             return Redirect("index");

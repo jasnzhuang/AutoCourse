@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.ComponentModel;
 
 namespace AutoCourse.Models
 {
@@ -20,8 +21,9 @@ namespace AutoCourse.Models
         /// 学校名称
         /// </summary>
         [Required]
+        [DisplayName("学校名称")]
         public string SchoolName { get; set; }
-        
+
         /// <summary>
         /// 学期
         /// </summary>

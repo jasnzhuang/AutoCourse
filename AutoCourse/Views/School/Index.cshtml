@@ -1,11 +1,8 @@
-﻿@model IEnumerable<AutoCourse.Models.School>
+﻿@using AutoCourse.BLL;
 
-@{
-    ViewBag.Title = "Index";
-}
+@model IEnumerable<AutoCourse.Models.School>
 
 <h2>学校列表</h2>
-
 
 <table class="table">
     <tr>
@@ -19,12 +16,7 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.SchoolName)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.SchoolID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.SchoolID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.SchoolID })
+                @Html.ActionLink(item.SchoolName, "/CourseView/Index", item.SchoolID)
             </td>
         </tr>
     }
@@ -32,5 +24,15 @@
 </table>
 
 <p>
-    @Html.ActionLink("新增", "Create")
+
+    @*判断，如果已经关联的学校，那么，这个地方就不要显示新增，而是编辑了*@
+    @if (User.GetSchoolID() == "0")
+    {
+        @Html.ActionLink("新增", "CreateNew");
+    }
+    else
+    {
+        Html.ActionLink("编辑", "Edit");
+    }
+
 </p>
