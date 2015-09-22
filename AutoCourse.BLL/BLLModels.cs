@@ -34,4 +34,9 @@ namespace AutoCourse.BLL
     {
 
     }
+
+    public class BLLTerm : ACBaseServices<Term>
+    {
+
+    }
 }

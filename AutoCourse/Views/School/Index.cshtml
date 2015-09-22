@@ -16,7 +16,7 @@
     {
         <tr>
             <td>
-                @Html.ActionLink(item.SchoolName, "/CourseView/Index", item.SchoolID)
+                @Html.ActionLink(item.SchoolName, "index", "CourseView", new { schoolid = item.SchoolID }, new { })
             </td>
         </tr>
     }

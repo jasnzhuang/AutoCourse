@@ -162,6 +162,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controllers\CouresViewController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SchoolController.cs" />
     <Compile Include="Global.asax.cs">
@@ -178,6 +179,7 @@
     <Content Include="Views\School\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\School\Edit.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
